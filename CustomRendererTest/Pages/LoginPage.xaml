@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:controls="clr-namespace:CustomRendererTest.Controls;assembly=CustomRendererTest"
+	x:Class="CustomRendererTest.LoginPage"
+	BackgroundColor="Silver"
+	Padding="20"
+	>
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout
+				VerticalOptions="Center"
+				>
+				<Label
+					Text="Login" TextColor="Blue"
+					FontSize="Large" FontAttributes="Bold"
+					HorizontalOptions="CenterAndExpand"
+					/>
+				<Entry 
+					Text="{Binding UserId}" 
+					Placeholder="User Id" 
+					HeightRequest="44" 
+					/>
+				<Entry 
+					Text="{Binding Password}" 
+					Placeholder="Password" 
+					HeightRequest="44" 
+					IsPassword="true"
+					/>
+				<StackLayout 
+					Orientation="Horizontal"
+					BackgroundColor="Transparent"
+					HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+					>
+					<controls:CustomSwitch
+						x:Name="RememberMeSwitch"
+						IsToggled="{Binding RememberMeToggleCommand}"
+						VerticalOptions="CenterAndExpand"
+						TrackColor="Blue"
+						ThumbColor="White"
+						OnThumbColor="Blue"
+						OffThumbColor="Gray"
+					>
+						
+					</controls:CustomSwitch>
+					<Label 
+						BackgroundColor="Transparent"
+						Text="Remember Me" TextColor="Blue"
+						HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+						FontSize="Medium"
+						YAlign="Center"
+						/>
+				</StackLayout> 
+				<controls:ShadowButton
+					BackgroundColor="Blue"
+					Text="Login" TextColor="White"
+					ShadowColor="Gray"
+					FontSize="Medium" FontAttributes="Bold"
+					Command="{Binding LoginCommand}"
+					/>
+				<Button 
+					BackgroundColor="Transparent"
+					Text="Forgot Password" TextColor="Blue"
+					FontSize="Medium"
+					Command="{Binding ForgotPasswordCommand}"
+					/>
+			</StackLayout>	
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
