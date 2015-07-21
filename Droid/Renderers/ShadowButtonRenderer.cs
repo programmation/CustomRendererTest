@@ -15,6 +15,10 @@ namespace CustomRendererTest.Droid
         private GradientDrawable _pressed;
         private LayerDrawable _normal;
 
+        public ShadowButtonRenderer()
+        {
+        }
+
         protected override void OnElementChanged (ElementChangedEventArgs<Button> e)
         {
             base.OnElementChanged (e);
@@ -78,10 +82,6 @@ namespace CustomRendererTest.Droid
 
             Control.SetPaddingRelative (0, 0, 2, 0);
             Control.SetBackgroundDrawable (sld);        
-        }
-        
-        public ShadowButtonRenderer()
-        {
         }
     }
 }

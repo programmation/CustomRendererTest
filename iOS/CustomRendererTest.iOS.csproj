@@ -116,6 +116,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\ShadowButtonRenderer.cs" />
+    <Compile Include="Renderers\CustomSwitchRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
